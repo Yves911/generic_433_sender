@@ -20,15 +20,7 @@ int Bytes[30];
 int BytesData[30]; 
 boolean Timing = false; // Print timings on serial when eq to true
 unsigned long CounterValue = 0;
-volatile int state = LOW;
 int pin = 13;
-
-// This function will return the value you want to send over RF, insert here code to calculate the value you want to send over the air
-boolean getCounter(unsigned long *CounterValue){
-  *CounterValue += 1; 
-  //*CounterValue = 67129; 
-  return true;
-}
 
 void itob(unsigned long integer, int length)
 {  
@@ -61,12 +53,11 @@ unsigned long power2(int power){    //gives 2 to the (power)
 }
 
 /**
- * Crée notre signal sous forme binaire
+ * Create binary signal 
 **/
 void buildSignal()
 {
   Serial.println(codeKit);
-  // Converti les codes respectifs pour le signal en binaire
   itob(codeKit, 14);
   for(int j=0;j < 14; j++){
    Serial.print(Bytes[j]);
@@ -175,4 +166,3 @@ void blink()
   transmit(true, CounterValue);
   transmit(true, CounterValue);
 }
-
