@@ -15,6 +15,7 @@ You can define the PIN on which is wired the data pin of the RF433 sender by cha
 **#define senderPin 12**
 
 Protocol look likes:
+
 CodeKit (ID) | type | Positive/Negative | Value
 ------------ | ---- | ----------------- | -----
 1000 | 10 | 0 | 67129 (decimal representation)
@@ -27,7 +28,7 @@ To read message created by this program you can use https://github.com/pimatic/p
 
 ##hall_sender.ino
 
-Connect to PIN2 (aka interrupt 0) a hall sensor for example a OH44E.
+In addition to above, connect to PIN2 (aka interrupt 0) a hall sensor for example a OH44E.
 
 The A3144E Hall sensor 44E OH44E principle of Hall effect switch IC, the use of magnetic semiconductor integrated circuit manufacturing technology, which is determined by the voltage regulator, Hall-voltage generator, differential amplifier, Schmitt trigger , temperature compensation circuit and open-collector output stage consisting of magnetic sensing circuit, the input of magnetic induction, the output is a digital voltage signal
 
