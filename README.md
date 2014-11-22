@@ -38,3 +38,7 @@ Now everytime that you will approach a magnet of the hall sensor, the sketch wil
 
 Important note insert a pullup resitor 1K between data pin of the hall sensor and vcc +3.3v
 
+##opto_sender.ino
+
+Works with  AMS  TSL257-LF  SENSOR, LIGHT-VOLTAGE CONVERTER 
+Count led pulses and send the number of pulses every ~15 seconds
